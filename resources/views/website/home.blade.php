@@ -52,9 +52,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="social">
-                        <a href="#"><img src="{{asset('images/facebook.png')}}" ></a>
-                        <a href="#"><img src="{{asset('images/instegram.png')}}"></a>
-
+                        <a href="https://www.facebook.com/Limitless.Naturals.eg/"><img src="{{asset('images/facebook.png')}}" ></a>
+                        <a href="https://instagram.com/limitless_naturals"><img src="{{asset('images/instegram.png')}}"></a>
                     </div>
 {{--                    <h3>Advanced <span>Solution</span></h3>--}}
 {{--                    <p class="text-p">Offering higher efficacy through an innovative medication for--}}

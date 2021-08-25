@@ -64,7 +64,7 @@ class RegistrationController extends Controller
 //            }
             $eventTime    = 'September 2, 2021';
             $location     = 'National museum of Civilization, Cairo';
-            $locationMap  = 'https://goo.gl/maps/8FyfkSV32qAqtdNy5';
+            $locationMap  = 'https://maps.app.goo.gl/H8YXDbFmgMG7ozQG8';
             sendMail($registration->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location,$locationMap);
 
             //sendWhatsApp($registration->original_path,$request->phone,$userCode);

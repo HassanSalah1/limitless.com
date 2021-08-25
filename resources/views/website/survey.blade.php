@@ -7,6 +7,7 @@
     <section class="content">
         <div class="banner-survey">
             <img src="images/survey-banner.png">
+
         </div>
         <!--banner-survey-->
         {{ Form::open(['route' => 'survey.store', 'method' => 'POST']) }}
