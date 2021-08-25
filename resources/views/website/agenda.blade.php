@@ -228,63 +228,63 @@
         </div>
         <!--speakers-->
 
-        <div class="registration-div agenda score" id="games">
-            <div class="container">
-                <div class="row" style="justify-content: center;">
-                    <div class="col-12">
-                        <h2 class="title-left">Games Score</h2>
-                    </div>
-                    <div class="col-10 padding-score">
-                    <!--<h3 class="title-score"><span><img src="{{ asset('images/puzzle.png') }}"></span>Game Score</h3>-->
-                        <br>
-                        {{-- <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during
-                            the event time.</p> --}}
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Time</th>
-                                <th>Score</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @if (count($games) > 1)
-                                @foreach ($games as $key => $game)
-                                    <tr>
-                                        <td>{{ $key + 1 }}</td>
-                                        <td>
-                                            <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->name }}
-                                            </p>
-                                        </td>
-                                        <td>{{ $game->created_at }}</td>
-                                        <td>{{ $game->score }}</td>
-                                    </tr>
-                                @endforeach
-                            @else
-                                <tr>
+{{--        <div class="registration-div agenda score" id="games">--}}
+{{--            <div class="container">--}}
+{{--                <div class="row" style="justify-content: center;">--}}
+{{--                    <div class="col-12">--}}
+{{--                        <h2 class="title-left">Games Score</h2>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-10 padding-score">--}}
+{{--                    <!--<h3 class="title-score"><span><img src="{{ asset('images/puzzle.png') }}"></span>Game Score</h3>-->--}}
+{{--                        <br>--}}
+{{--                        --}}{{-- <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during--}}
+{{--                            the event time.</p> --}}
+{{--                        <table class="table table-striped">--}}
+{{--                            <thead>--}}
+{{--                            <tr>--}}
+{{--                                <th>#</th>--}}
+{{--                                <th>Name</th>--}}
+{{--                                <th>Time</th>--}}
+{{--                                <th>Score</th>--}}
+{{--                            </tr>--}}
+{{--                            </thead>--}}
+{{--                            <tbody>--}}
+{{--                            @if (count($games) > 1)--}}
+{{--                                @foreach ($games as $key => $game)--}}
+{{--                                    <tr>--}}
+{{--                                        <td>{{ $key + 1 }}</td>--}}
+{{--                                        <td>--}}
+{{--                                            <p><span><img src="{{ asset('images/man.png') }}"></span>{{ $game->name }}--}}
+{{--                                            </p>--}}
+{{--                                        </td>--}}
+{{--                                        <td>{{ $game->created_at }}</td>--}}
+{{--                                        <td>{{ $game->score }}</td>--}}
+{{--                                    </tr>--}}
+{{--                                @endforeach--}}
+{{--                            @else--}}
+{{--                                <tr>--}}
 
-                                    <td> you</td>
-                                    <td> do not</td>
-                                    <td> play</td>
-                                    <td> yet</td>
+{{--                                    <td> you</td>--}}
+{{--                                    <td> do not</td>--}}
+{{--                                    <td> play</td>--}}
+{{--                                    <td> yet</td>--}}
 
-                                </tr>
+{{--                                </tr>--}}
 
-                            @endif
-                            </tbody>
-                        </table>
-
-
-                    </div>
-                    <!--col-10-->
-                </div>
-                <!--row-->
-            </div>
-            <!--container-->
+{{--                            @endif--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
 
 
-        </div>
+{{--                    </div>--}}
+{{--                    <!--col-10-->--}}
+{{--                </div>--}}
+{{--                <!--row-->--}}
+{{--            </div>--}}
+{{--            <!--container-->--}}
+
+
+{{--        </div>--}}
         <!--registration-div-->
     </section>
     <!--content-->

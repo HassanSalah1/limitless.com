@@ -71,24 +71,24 @@
 
 
         </div><!--profile-->
-        <div class="registration-div agenda games" >
-            <div class="container">
-                <div class="row" style="justify-content: center;">
-                    <div class="col-12">
-                        <h2 class="title-left">Games Score</h2>
-                    </div>
-                    <div class="col-10 ">
-                         <br>
-                            <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during the event time.</p>
+{{--        <div class="registration-div agenda games" >--}}
+{{--            <div class="container">--}}
+{{--                <div class="row" style="justify-content: center;">--}}
+{{--                    <div class="col-12">--}}
+{{--                        <h2 class="title-left">Games Score</h2>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-10 ">--}}
+{{--                         <br>--}}
+{{--                            <p>Can't wait to play? Stay tuned for a lot of the entertaining games that will be live during the event time.</p>--}}
 
 
-                    </div><!--col-10-->
+{{--                    </div><!--col-10-->--}}
 
-                </div> <!--row-->
-            </div><!--container-->
+{{--                </div> <!--row-->--}}
+{{--            </div><!--container-->--}}
 
 
-        </div><!--profile-->
+{{--        </div><!--profile-->--}}
 
 
 

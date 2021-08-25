@@ -48,8 +48,8 @@ class RegistrationController extends Controller
             if ($request->input('other')){
                 $requestData['register_as'] = $request->input('other');
             }
-            if ($request->input('other')){
-                $requestData['register_as'] = $request->input('other');
+            if ($request->input('physician')){
+                $requestData['register_as'] = $request->input('physician');
             }
             $registration =  $this->registration->create($requestData);
 
@@ -63,11 +63,11 @@ class RegistrationController extends Controller
 //                $locationMap  = 'https://maps.app.goo.gl/6KTDrkL2f1eE34eW6';
 //            }
             $eventTime    = 'September 2, 2021';
-            $location     = 'Sunrise Alex Avenue Hotel, Alexandria';
-            $locationMap  = 'https://maps.app.goo.gl/6KTDrkL2f1eE34eW6';
+            $location     = 'National museum of Civilization, Cairo';
+            $locationMap  = 'https://goo.gl/maps/8FyfkSV32qAqtdNy5';
             sendMail($registration->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location,$locationMap);
 
-            sendWhatsApp($registration->original_path,$request->phone,$userCode);
+            //sendWhatsApp($registration->original_path,$request->phone,$userCode);
 
             DB::commit();
         } catch (Exception $e) {
