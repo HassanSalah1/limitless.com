@@ -294,10 +294,10 @@
                  $('#other').removeClass('d-none');
              }else {
                  $('#other').addClass('d-none');
+                 $('#other select').attr('required', false).val('');
              }
             if (this.value === 'Physician'){
                 $('#physician').removeClass('d-none');
-
                 $('#physician select').attr('required', true);
             }else {
                 $('#physician').addClass('d-none');
