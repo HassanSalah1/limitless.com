@@ -64,7 +64,7 @@
                         <div >
                             <img class="img-cal" src="{{asset('images/cal.png')}}">
 {{--                            <p> <span class="red-color">30<sup>th</sup>July</span ><span class="dates-span">5:30 pm to 10:00 p.m</span></p>--}}
-                            <p class="block-span text-left"><b><span class="red-color dates-span2">2nd of September</span></b>
+                            <p class="block-span text-left"><b><span class="red-color dates-span2">2<sup>nd</sup> of September</span></b>
                                 <br><span >5:00 PM to 10:00 PM</span></p>
                         </div>
                         <a href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
@@ -82,7 +82,7 @@
                 <div class="main-div">
                     <div class="pl-3">
                         <img class="img-cal" src="{{asset('images/cal.png')}}">
-                        <p class="block-span text-left"><b><span class="red-color dates-span2">2nd<sup>of</sup>September</span></b>
+                        <p class="block-span text-left"><b><span class="red-color dates-span2">2<sup>nd</sup> of September</span></b>
                             <br><span >5:00 PM to 10:00 PM </span></p>
                     </div>
                     <a  href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow2.png')}}"></span></a>

@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-md-3  my-3">
                     <div class="copy-right text-center text-lg-right">
-                        <div class="sponsor">Endorsed by EVA Pharma</div>
+                        <div class="sponsor">Endorsed by</div>
                     </div>
                 </div>
                 <div class="col-md-2">
