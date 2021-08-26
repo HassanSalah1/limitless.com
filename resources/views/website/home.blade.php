@@ -64,8 +64,8 @@
                         <div >
                             <img class="img-cal" src="{{asset('images/cal.png')}}">
 {{--                            <p> <span class="red-color">30<sup>th</sup>July</span ><span class="dates-span">5:30 pm to 10:00 p.m</span></p>--}}
-                            <p class="block-span text-left"><b><span class="red-color dates-span2">2<sup>nd</sup>September</span></b>
-                                <br><span >5:00 pm to 10:00 p.m</span></p>
+                            <p class="block-span text-left"><b><span class="red-color dates-span2">2nd of September</span></b>
+                                <br><span >5:00 PM to 10:00 PM</span></p>
                         </div>
                         <a href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
                     </div><!--main-div-->
@@ -82,8 +82,8 @@
                 <div class="main-div">
                     <div class="pl-3">
                         <img class="img-cal" src="{{asset('images/cal.png')}}">
-                        <p class="block-span text-left"><b><span class="red-color dates-span2">2<sup>nd</sup>September</span></b>
-                            <br><span >5:00 pm to 10:00 p.m</span></p>
+                        <p class="block-span text-left"><b><span class="red-color dates-span2">2nd<sup>of</sup>September</span></b>
+                            <br><span >5:00 PM to 10:00 PM </span></p>
                     </div>
                     <a  href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow2.png')}}"></span></a>
                 </div><!--main-div-->
@@ -204,7 +204,7 @@
                                         <label>Choose the event <span>*</span> </label>
                                         <select name="venue" required>
 {{--                                            <option value=""></option>--}}
-                                            <option value="National museum of Civilization" selected>National museum of Civilization 2.9.2021</option>
+                                            <option value="Limitless Naturals Launch Event 2.9.2021" selected>Limitless Naturals Launch Event 2.9.2021</option>
 {{--                                            <option value="Nile Ritz">Nile Ritz 24.9.2021</option>--}}
 {{--                                            <option value="Alexandria">Alexandria 8.10.2021</option>--}}
                                         </select>
@@ -228,7 +228,8 @@
                                     </div>
                                     <div class="col-lg-6 col-12 div-field d-none" id="physician">
                                         <label>Physician <span>*</span> </label>
-                                        <select name="physician">
+                                        <select name="physician" id="physician_select">
+                                            <option value="">choose one</option>
                                             <option value="Nutrition">Nutrition</option>
                                             <option value="Internal Medicine">Internal Medicine</option>
                                             <option value="Gynecology">Gynecology</option>
@@ -236,7 +237,13 @@
                                             <option value="General Practice">General Practice</option>
                                             <option value="Pediatrics">Pediatrics</option>
                                             <option value="Pediatrics">Pediatrics</option>
+                                            <option value="other">Other</option>
                                         </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 div-field d-none" id="physician_other">
+                                        <label>Other <span>*</span> </label>
+                                        <input type="text" class="form-control" placeholder="" name="physician_other" >
+
                                     </div>
                                     <div class=" col-12">
                                         <div class="send">
@@ -290,9 +297,25 @@
              }
             if (this.value === 'Physician'){
                 $('#physician').removeClass('d-none');
+
+                $('#physician select').attr('required', true);
             }else {
                 $('#physician').addClass('d-none');
+                $('#physician select').attr('required', false).val('');
+                $('#physician_other').addClass('d-none');
+                $('#physician_other input').attr('required', false).removeAttr('value').val('');
             }
         });
+        $('#physician_select').on('change', function() {
+            if (this.value === 'other'){
+                $('#physician_other').removeClass('d-none');
+                $('#physician_other input').attr('required', true);
+            }else {
+                $('#physician_other').addClass('d-none');
+                $('#physician_other input').attr('required', false).removeAttr('value').val('');
+            }
+        });
+
+
     </script>
 @endpush

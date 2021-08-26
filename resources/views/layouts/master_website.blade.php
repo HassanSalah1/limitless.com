@@ -33,7 +33,6 @@
                 </div>
                 <div class="col-lg-6 text text-center text-lg-left">
                     <p class="d-inline-block mr-2">SA2103230903</p>
-                    <p class="d-inline-block mr-2"> Exp: 21/03/2022</p>
                     <p class="d-inline-block">APR/2021/RESP/4/I</p>
                 </div>
                 <div class="col-lg-4">
@@ -91,7 +90,10 @@
 
                         </div>
                         <div class="col-md-6">
-                            <img class="w-auto mt-4 mt-md-0 mt-lg-0" style="display: block; margin: auto;" src="{{asset('images/social-footer.png')}}" >
+                            <div class="mt-4 text-center">
+                                <a href="https://www.facebook.com/Limitless.Naturals.eg/" style="margin-right: 30px;" target="_blank"><img src="{{asset('images/facebook.png')}}" ></a>
+                                <a href="https://instagram.com/limitless_naturals" target="_blank"><img src="{{asset('images/instegram.png')}}"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,12 +107,12 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="copy-right text-center text-lg-left">
-                        <p>Copyright © 2021 Eva Pharma, Inc. all rights are save.</p>
+                        <p>Copyright © 2021 Eva Pharma, Inc. All rights reserved.</p>
                     </div>
                 </div>
                 <div class="col-md-3  my-3">
                     <div class="copy-right text-center text-lg-right">
-                        <div class="sponsor">Sponsored by</div>
+                        <div class="sponsor">Endorsed by EVA Pharma</div>
                     </div>
                 </div>
                 <div class="col-md-2">

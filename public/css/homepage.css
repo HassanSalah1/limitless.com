@@ -446,7 +446,7 @@ header .counter .bg {
   color: #000000;
   text-transform: capitalize;
   display: inline-block;
-  width: 80px;
+  width: auto !important;
 }
 @media (max-width: 1024px) {
   .main-div div .red-color {

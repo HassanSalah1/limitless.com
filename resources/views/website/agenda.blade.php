@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="social">
-                            <a href="https://www.facebook.com/Limitless.Naturals.eg/"><img src="{{asset('images/facebook.png')}}" ></a>
-                            <a href="https://instagram.com/limitless_naturals"><img src="{{asset('images/instegram.png')}}"></a>
+                            <a href="https://www.facebook.com/Limitless.Naturals.eg/" target="_blank"><img src="{{asset('images/facebook.png')}}" ></a>
+                            <a href="https://instagram.com/limitless_naturals" target="_blank"><img src="{{asset('images/instegram.png')}}"></a>
                         </div>
                         {{--                        <h3>Advanced <span>Solution</span></h3>--}}
                         {{--                        <p class="text-p">Offering higher efficacy through an innovative medication for--}}
@@ -96,7 +96,7 @@
                         <div class="col-12 col-lg-2">
                             <div class="event-day-div">
                                  <span class="day-name">Day 1</span>
-                                <span class="red-span">2<sup>nd</sup></span>
+                                <span class="red-span">2nd Of</span>
                                 <span class="month-name">September </span>
                             </div>
                         </div>

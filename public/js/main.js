@@ -37,7 +37,7 @@ $(function () {
             },
         },
         submitHandler: function (form) {
-            $('#registration_form').attr('disabled','disabled')
+             $('#registration_form').attr('disabled','disabled')
 
             $.ajax({
                 headers: {

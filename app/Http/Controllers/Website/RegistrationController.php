@@ -51,6 +51,9 @@ class RegistrationController extends Controller
             if ($request->input('physician')){
                 $requestData['register_as'] = $request->input('physician');
             }
+            if ($request->input('physician_other')){
+                $requestData['register_as'] = $request->input('physician_other');
+            }
             $registration =  $this->registration->create($requestData);
 
 //            if (strpos($request->venue, 'Cairo') !== false) {
