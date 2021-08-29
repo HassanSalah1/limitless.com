@@ -26,22 +26,25 @@ class RegisterImport implements ToModel, WithHeadingRow
      */
     public function model(array $row): ?Registration
     {
-//        $user = $this->isDoctorExisted($row['email']);
-//        if (!$user)
-//            return null;
-        DB::beginTransaction();
+
+        if ($this->isDoctorExisted($row['email']))
+            return null;
+
+        if (!$row['email'])
+            return null;
+
         $userCode = '12' . rand(1000, 9999);
 
         $qrcode = $this->qrCode->create($userCode);
 
-
+        dump($row);
         $path = url('/') . '/qrcodes/' . $qrcode;
 
 
         $eventTime = 'September 2, 2021';
         $location = 'National museum of Civilization, Cairo';
         $locationMap = 'https://maps.app.goo.gl/H8YXDbFmgMG7ozQG8';
-        //sendMail($path,$row['email'],$userCode, $row['first_name'], $eventTime, $location,$locationMap);
+        sendMail($path,$row['email'],$userCode, $row['first_name'], $eventTime, $location,$locationMap);
 
         //sendWhatsApp($registration->original_path,$request->phone,$userCode);
 

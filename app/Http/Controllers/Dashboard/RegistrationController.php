@@ -53,11 +53,13 @@ class RegistrationController extends Controller
 
     public function import()
     {
+
         return view('dashboard.registrations.import');
     }
 
     public function store(Request $request)
     {
+
 
         try {
             Excel::import(new RegisterImport($request->all()), $request->file('file'));
@@ -65,7 +67,6 @@ class RegistrationController extends Controller
             return redirect()->back()->with('success','Excel Sheet has been uploaded successfully.');
         } catch (\Exception $e){
             $msg = $e->getMessage().''.$e->getLine().''.$e->getFile();
-            //dd($msg);
             return redirect()->back()->withInput($request->input())->with('error', $msg);
         }
     }

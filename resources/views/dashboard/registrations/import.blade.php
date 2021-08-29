@@ -18,6 +18,16 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    @if(session()->has('success'))
+                        <div class="alert alert-success">{{session()->get('success')}}</div>
+                    @endif
+                        @if(session()->has('error'))
+                            <div class="alert alert-danger">{{session()->get('error')}}</div>
+                        @endif
+                </div>
+            </div>
             <form method="POST" action="{{ route('admin.registrations.store') }}"  enctype="multipart/form-data" style="background-color: #f8f9fa;">
                 @csrf
                 <div class="row">
