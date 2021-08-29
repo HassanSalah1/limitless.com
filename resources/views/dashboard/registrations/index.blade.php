@@ -13,7 +13,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Submitted Drs.</h3>
-            <a href="{{route('registrations.import')}}" style="float: right;" class="btn btn-warning pull-right">Bulk import</a>
+            <a href="{{route('admin.registrations.import')}}" style="float: right;" class="btn btn-warning pull-right">Bulk import</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">

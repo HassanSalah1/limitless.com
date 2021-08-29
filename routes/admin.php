@@ -13,8 +13,8 @@ Route::group(['namespace'=>'Dashboard'],function () {
         Route::get('registrations/index', 'RegistrationController@index')->name('registrations.index');
 
         Route::get('registrations/attendees', 'RegistrationController@attendees')->name('registrations.attendees');
-        Route::get('registrations/import', 'RegistrationController@import')->name('registrations.import');
-        Route::post('registrations/import', 'RegistrationController@store')->name('registrations.store');
+        Route::get('registrations/import', 'RegistrationController@import')->name('admin.registrations.import');
+        Route::post('registrations/import', 'RegistrationController@store')->name('admin.registrations.store');
 
         Route::post('registrations/destroy', 'RegistrationController@destroy')->name('registrations.destroy');
 

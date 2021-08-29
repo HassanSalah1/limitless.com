@@ -65,6 +65,7 @@ class RegistrationController extends Controller
             return redirect()->back()->with('success','Excel Sheet has been uploaded successfully.');
         } catch (\Exception $e){
             $msg = $e->getMessage().''.$e->getLine().''.$e->getFile();
+            //dd($msg);
             return redirect()->back()->withInput($request->input())->with('error', $msg);
         }
     }

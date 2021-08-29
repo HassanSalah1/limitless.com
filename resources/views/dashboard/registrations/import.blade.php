@@ -18,7 +18,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <form method="POST" action="{{ route('registrations.store') }}"  enctype="multipart/form-data" style="background-color: #f8f9fa;">
+            <form method="POST" action="{{ route('admin.registrations.store') }}"  enctype="multipart/form-data" style="background-color: #f8f9fa;">
                 @csrf
                 <div class="row">
                     <div class="col-lg-6 col-12 div-field">
