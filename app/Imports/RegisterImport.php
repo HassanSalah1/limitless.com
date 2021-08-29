@@ -37,7 +37,6 @@ class RegisterImport implements ToModel, WithHeadingRow
 
         $qrcode = $this->qrCode->create($userCode);
 
-        dump($row);
         $path = url('/') . '/qrcodes/' . $qrcode;
 
 
