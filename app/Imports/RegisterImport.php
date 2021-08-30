@@ -26,11 +26,11 @@ class RegisterImport implements ToModel, WithHeadingRow
      */
     public function model(array $row): ?Registration
     {
-
-        if ($this->isDoctorExisted($row['email']))
+        $email = str_replace(' ', '', $row['email']);
+        if ($this->isDoctorExisted($email))
             return null;
 
-        if (!$row['email'])
+        if (!$email)
             return null;
 
         $userCode = '12' . rand(1000, 9999);
@@ -43,14 +43,14 @@ class RegisterImport implements ToModel, WithHeadingRow
         $eventTime = 'September 2, 2021';
         $location = 'National museum of Civilization, Cairo';
         $locationMap = 'https://maps.app.goo.gl/H8YXDbFmgMG7ozQG8';
-        sendMail($path,$row['email'],$userCode, $row['first_name'], $eventTime, $location,$locationMap);
+        sendMail($path,$email,$userCode, $row['first_name'], $eventTime, $location,$locationMap);
 
         //sendWhatsApp($registration->original_path,$request->phone,$userCode);
 
         return new Registration([
             'first_name' => $row['first_name'],
             'last_name' => $row['last_name'],
-            'email' => $row['email'],
+            'email' => $email,
             'phone' => $row['phone'],
             'venue' => $this->data['venue'],
             'qrcode' => $qrcode,

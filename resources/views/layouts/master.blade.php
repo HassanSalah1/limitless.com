@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image" href="{{asset('images/fav-icon.png')}}">
 
-    <title>Limitless Advance | Dashboard</title>
+    <title>Limitless | Dashboard</title>
 
     @include('layouts.includes.dashboard.style')
     @include('layouts.includes.messages.style')

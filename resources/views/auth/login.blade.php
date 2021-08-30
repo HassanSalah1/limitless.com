@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card-header text-center">
-    <a class="h4"><b>Limitless Naturals</b> Login</a>
+    <a class="h4"><b>Limitless</b> Login</a>
 </div>
 <div class="card-body">
     <p class="login-box-msg">Sign in to start your session</p>

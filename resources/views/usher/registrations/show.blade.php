@@ -204,11 +204,11 @@
                                         value="{{ $registration->phone }}" disabled>
                                 </div>
 
-                                <div class="form-group col-12" style="float: left;">
-                                    <label for="governorate" class="col-12" style="padding: 0;">Governorate</label>
-                                    <input type="text" class="form-control col-12" name="governorate" id="governorate"
-                                        value="{{ $registration->governorate }}" disabled>
-                                </div>
+{{--                                <div class="form-group col-12" style="float: left;">--}}
+{{--                                    <label for="governorate" class="col-12" style="padding: 0;">Governorate</label>--}}
+{{--                                    <input type="text" class="form-control col-12" name="governorate" id="governorate"--}}
+{{--                                        value="{{ $registration->governorate }}" disabled>--}}
+{{--                                </div>--}}
                                 <div class="form-group col-12" style="float: left;">
                                     <label for="venue" class="col-12" style="padding: 0;">Venue</label>
                                     <input type="text" class="form-control col-12" name="venue" id="venue"
