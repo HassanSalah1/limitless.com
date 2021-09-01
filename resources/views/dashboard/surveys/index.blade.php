@@ -17,20 +17,16 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Full name</th>
-                        <th>Title</th>
-                        <th>Email</th>
-                        <th>Mobile number</th>
-                        <th>Specialty</th>
-                        <th>Department</th>
-                        <th>Full Address</th>
-                        <th>City,Country</th>
-                        <th>Hospital/Organization</th>
-                        <th>Hospital Address</th>
                         <th>Question 1</th>
                         <th>Question 2</th>
                         <th>Question 3</th>
                         <th>Question 4</th>
+                        <th>Question 5</th>
+                        <th>Question 6</th>
+                        <th>Question 7</th>
+                        <th>Question 8</th>
+                        <th>Question 9</th>
+                        <th>Question 10</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -48,31 +44,22 @@
                             <td>{{ $item->question_8 }}</td>
                             <td>{{ $item->question_9 }}</td>
                             <td>{{ $item->question_10 }}</td>
-                            <td>{{ $item->question_11 }}</td>
-                            <td>{{ $item->question_12 }}</td>
-                            <td>{{ $item->question_13 }}</td>
-                            <td>{{ $item->question_14 }}</td>
-
                         </tr>
                     @endforeach
                     </tbody>
                     <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>Full name</th>
-                        <th>Title</th>
-                        <th>Email</th>
-                        <th>Mobile number</th>
-                        <th>Specialty</th>
-                        <th>Department</th>
-                        <th>Full Address</th>
-                        <th>City,Country</th>
-                        <th>Hospital/Organization</th>
-                        <th>Hospital Address</th>
                         <th>Question 1</th>
                         <th>Question 2</th>
                         <th>Question 3</th>
                         <th>Question 4</th>
+                        <th>Question 5</th>
+                        <th>Question 6</th>
+                        <th>Question 7</th>
+                        <th>Question 8</th>
+                        <th>Question 9</th>
+                        <th>Question 10</th>
 
                     </tr>
                     </tfoot>

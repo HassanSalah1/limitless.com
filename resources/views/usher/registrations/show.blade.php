@@ -154,6 +154,9 @@
     <section class="content view-page-content">
 
         <div class="action-div-show">
+            @if ($registration->is_attend == 0)
+                <a href="#" class="mr-3 d-inline-block" onclick="$('form#data').submit();" >attend</a>
+            @endif
             <a class="mr-3" onclick="print_page()">Print</a>
             <a href="{{ route('usher.home') }}">Go Back</a>
         </div>
@@ -173,8 +176,8 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form method="POST" action="{{ route('registrations.attend') }}"
-                            style="    background-color: #f8f9fa;">
+                        <form method="POST" id="data" action="{{ route('registrations.attend') }}"
+                            style="background-color: #f8f9fa;">
                             @csrf
                             <input type="hidden" name="userCode" value="{{ $registration->user_code }}">
                             <div class="card-body">
@@ -218,20 +221,19 @@
                                 <div class="form-group col-12" style="float: left;">
                                     <label for="medical_representative" class="col-12" style="padding: 0;">Register as</label>
                                     <input type="text" class="form-control col-12" name="register_as"
-                                        id="medical_representative"
-                                        value="{{ $registration->register_as }}" disabled>
+                                        id="medical_representative" value="{{ $registration->register_as }}" disabled>
                                 </div>
 
                             </div>
 
                              @if ($registration->is_attend == 0)
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary" style="background-color: #000000;"
-                                    id="submit-button-id">
-                                    Attend
-                                </button>
-                            </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary d-none" style="background-color: #000000;"
+                                        id="submit-button-id">
+                                        Attend
+                                    </button>
+                                </div>
                              @endif
 
                         </form>
