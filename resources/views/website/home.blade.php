@@ -203,16 +203,16 @@
 
                                     <div class="col-lg-6 col-12 div-field">
                                         <label>Choose the event <span>*</span> </label>
-                                        <select name="venue" required>
+                                        <select name="venue" id="venueSelect" required>
                                             {{--                                            <option value=""></option>--}}
                                             <option value="OBGYN Conference 16-17.9.2021" selected>OBGYN Conference 16-17.9.2021</option>
                                             <option value="LPLP (St.Regis Cairo) 24.9.2021">LPLP (St.Regis Cairo) 24.9.2021</option>
                                             <option value="LPLP (Golden Jewel, Alex) 8.10.2021">LPLP (Golden Jewel, Alex) 8.10.2021</option>
                                         </select>
                                     </div><!--col-12-->
-                                    <div class="col-lg-6 col-12 div-field">
+                                    <div class="col-lg-6 col-12 div-field d-none" id="invited_by">
                                         <label>Invited By:<span>*</span> </label>
-                                        <select name="invited_by" required>
+                                        <select name="invited_by" required >
                                             @foreach(medicalReps() as $key => $value )
                                                 <option value="{{$value}}">{{$value}}</option>
                                             @endforeach
@@ -324,7 +324,13 @@
                 $('#physician_other input').attr('required', false).removeAttr('value').val('');
             }
         });
-
+        $('#venueSelect').on('change', function() {
+            if (this.value === 'OBGYN Conference 16-17.9.2021'){
+                $('#invited_by').addClass('d-none');
+            }else {
+                $('#invited_by').removeClass('d-none');
+            }
+        });
 
     </script>
 @endpush
