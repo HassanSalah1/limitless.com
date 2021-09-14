@@ -200,13 +200,22 @@
 {{--                                            <option value="Luxor">Luxor</option>--}}
 {{--                                        </select>--}}
 {{--                                    </div><!--col-12-->--}}
+
                                     <div class="col-lg-6 col-12 div-field">
                                         <label>Choose the event <span>*</span> </label>
                                         <select name="venue" required>
-{{--                                            <option value=""></option>--}}
-                                            <option value="Limitless Naturals Launch Event 2.9.2021" selected>Limitless Naturals Launch Event 2.9.2021</option>
-{{--                                            <option value="Nile Ritz">Nile Ritz 24.9.2021</option>--}}
-{{--                                            <option value="Alexandria">Alexandria 8.10.2021</option>--}}
+                                            {{--                                            <option value=""></option>--}}
+                                            <option value="OBGYN Conference 16-17.9.2021" selected>OBGYN Conference 16-17.9.2021</option>
+                                            <option value="LPLP (St.Regis Cairo) 24.9.2021">LPLP (St.Regis Cairo) 24.9.2021</option>
+                                            <option value="LPLP (Golden Jewel, Alex) 8.10.2021">LPLP (Golden Jewel, Alex) 8.10.2021</option>
+                                        </select>
+                                    </div><!--col-12-->
+                                    <div class="col-lg-6 col-12 div-field">
+                                        <label>Invited By:<span>*</span> </label>
+                                        <select name="invited_by" required>
+                                            @foreach(medicalReps() as $key => $value )
+                                                <option value="{{$value}}">{{$value}}</option>
+                                            @endforeach
                                         </select>
                                     </div><!--col-12-->
                                     <div class="col-lg-6 col-12 div-field">

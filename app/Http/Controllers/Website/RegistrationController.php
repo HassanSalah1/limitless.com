@@ -56,18 +56,22 @@ class RegistrationController extends Controller
             }
             $registration =  $this->registration->create($requestData);
 
-//            if (strpos($request->venue, 'Cairo') !== false) {
-//                $eventTime    = 'July 30, 2021';
-//                $location     = 'The Nile Ritz-Carlton, Cairo';
-//                $locationMap  = 'https://maps.app.goo.gl/9MXYY5CqRjHsDEY26';
-//            }else{
-//                $eventTime    = 'August 2, 2021';
-//                $location     = 'Sunrise Alex Avenue Hotel, Alexandria';
-//                $locationMap  = 'https://maps.app.goo.gl/6KTDrkL2f1eE34eW6';
-//            }
-            $eventTime    = 'September 2, 2021';
-            $location     = 'National museum of Civilization, Cairo';
-            $locationMap  = 'https://maps.app.goo.gl/H8YXDbFmgMG7ozQG8';
+            if (strpos($request->venue, 'OBGYN') !== false) {
+                $eventTime    = 'September 16-17, 2021';
+                $location     = 'InterContinental Cairo Semiramis, an IHG Hotel, Cairo';
+                $locationMap  = 'https://maps.app.goo.gl/M3SgikdKXRyfPNhEA';
+            }elseif (strpos($request->venue, 'Cairo') !== false){
+                $eventTime    = 'September 24, 2021';
+                $location     = 'The St. Regis, Cairo';
+                $locationMap  = 'https://maps.app.goo.gl/HsdVmDbgaQNgLmqD7';
+            }else{
+                $eventTime    = 'October 8, 2021';
+                $location     = 'Golden Jewel Beach & Hotel, Alexandria';
+                $locationMap  = 'https://maps.app.goo.gl/e4YR31xWUCbhwneo7';
+            }
+//            $eventTime    = 'September 2, 2021';
+//            $location     = 'National museum of Civilization, Cairo';
+//            $locationMap  = 'https://maps.app.goo.gl/H8YXDbFmgMG7ozQG8';
             sendMail($registration->original_path,$request->email,$userCode, $request->first_name, $eventTime, $location,$locationMap);
 
             //sendWhatsApp($registration->original_path,$request->phone,$userCode);

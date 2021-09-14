@@ -35,6 +35,9 @@ $(function () {
             register_as: {
                 required: true
             },
+            invited_by: {
+                required: true
+            },
         },
         submitHandler: function (form) {
              $('#registration_form').attr('disabled','disabled')
@@ -74,6 +77,9 @@ $(function () {
                         }
                         if (data.responseJSON.errors.venue) {
                             toastr.info(data.responseJSON.errors.venue);
+                        }
+                        if (data.responseJSON.errors.invited_by) {
+                            toastr.info(data.responseJSON.errors.invited_by);
                         }
                         // if (data.responseJSON.errors.governorate) {
                         //     toastr.info(data.responseJSON.errors.governorate);

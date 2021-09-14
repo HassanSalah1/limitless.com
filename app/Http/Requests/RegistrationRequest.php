@@ -31,6 +31,7 @@ class RegistrationRequest extends FormRequest
             'email'        =>'required|email|unique:registrations,email|max:190',
             'phone'        =>'required|unique:registrations,phone|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|phone:AUTO',
             'venue'        =>'required',
+            'invited_by'   =>'required',
             'governorate'  =>'nullable',
             'register_as'  =>'required',
             'other'        =>'nullable',

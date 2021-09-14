@@ -727,6 +727,8 @@ class ComposerStaticInitd4fba858930db86a8186f9d2d30157b4
         'App\\Http\\Requests\\RegistrationRequest' => __DIR__ . '/../..' . '/app/Http/Requests/RegistrationRequest.php',
         'App\\Http\\Requests\\SearchRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SearchRequest.php',
         'App\\Http\\Requests\\SurveyRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SurveyRequest.php',
+        'App\\Imports\\RegisterImport' => __DIR__ . '/../..' . '/app/Imports/RegisterImport.php',
+        'App\\Imports\\SendEmailMarketingImport' => __DIR__ . '/../..' . '/app/Imports/SendEmailMarketingImport.php',
         'App\\Mail\\RegistrationMail' => __DIR__ . '/../..' . '/app/Mail/RegistrationMail.php',
         'App\\Models\\Game' => __DIR__ . '/../..' . '/app/Models/Game.php',
         'App\\Models\\GameReference' => __DIR__ . '/../..' . '/app/Models/GameReference.php',

@@ -45,6 +45,8 @@ return array(
     'App\\Http\\Requests\\RegistrationRequest' => $baseDir . '/app/Http/Requests/RegistrationRequest.php',
     'App\\Http\\Requests\\SearchRequest' => $baseDir . '/app/Http/Requests/SearchRequest.php',
     'App\\Http\\Requests\\SurveyRequest' => $baseDir . '/app/Http/Requests/SurveyRequest.php',
+    'App\\Imports\\RegisterImport' => $baseDir . '/app/Imports/RegisterImport.php',
+    'App\\Imports\\SendEmailMarketingImport' => $baseDir . '/app/Imports/SendEmailMarketingImport.php',
     'App\\Mail\\RegistrationMail' => $baseDir . '/app/Mail/RegistrationMail.php',
     'App\\Models\\Game' => $baseDir . '/app/Models/Game.php',
     'App\\Models\\GameReference' => $baseDir . '/app/Models/GameReference.php',
