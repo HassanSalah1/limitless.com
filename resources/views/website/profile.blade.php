@@ -66,6 +66,16 @@
                             </div><!--row-->
                         </form>
                     </div><!--col-10-->
+                    <div class="col-12">
+                        <div class="text-center">
+                            <form method="get" action="{{ route('user.logout') }}">
+                                @csrf
+                                <button type="submit" class="" style="color: #000; border: none;" >
+                                    logout
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div> <!--row-->
             </div><!--container-->
 
