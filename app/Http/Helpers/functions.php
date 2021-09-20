@@ -30,7 +30,6 @@ function sendMail($qrcode, $email, $userCode, $userName, $eventTime, $location, 
     $client->send($message);
 
 }
-
 function setCurrentUser($phone)
 {
     Session::put('user_phone', $phone);

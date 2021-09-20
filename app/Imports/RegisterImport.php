@@ -40,9 +40,20 @@ class RegisterImport implements ToModel, WithHeadingRow
         $path = url('/') . '/qrcodes/' . $qrcode;
 
 
-        $eventTime = 'September 2, 2021';
-        $location = 'National museum of Civilization, Cairo';
-        $locationMap = 'https://maps.app.goo.gl/H8YXDbFmgMG7ozQG8';
+        if (strpos($this->data['venue'], 'OBGYN') !== false) {
+            $eventTime    = 'September 16-17, 2021';
+            $location     = 'InterContinental Cairo Semiramis, an IHG Hotel, Cairo';
+            $locationMap  = 'https://maps.app.goo.gl/M3SgikdKXRyfPNhEA';
+        }elseif (strpos($this->data['venue'], 'Cairo') !== false){
+            $eventTime    = 'October 8, 2021';
+            $location     = 'The St. Regis, Cairo';
+            $locationMap  = 'https://maps.app.goo.gl/HsdVmDbgaQNgLmqD7';
+        }else{
+            $eventTime    = 'October 15, 2021';
+            $location     = 'Golden Jewel Beach & Hotel, Alexandria';
+            $locationMap  = 'https://maps.app.goo.gl/e4YR31xWUCbhwneo7';
+        }
+
         sendMail($path,$email,$userCode, $row['first_name'], $eventTime, $location,$locationMap);
 
         //sendWhatsApp($registration->original_path,$request->phone,$userCode);

@@ -61,11 +61,11 @@ class RegistrationController extends Controller
                 $location     = 'InterContinental Cairo Semiramis, an IHG Hotel, Cairo';
                 $locationMap  = 'https://maps.app.goo.gl/M3SgikdKXRyfPNhEA';
             }elseif (strpos($request->venue, 'Cairo') !== false){
-                $eventTime    = 'September 24, 2021';
+                $eventTime    = 'October 8, 2021';
                 $location     = 'The St. Regis, Cairo';
                 $locationMap  = 'https://maps.app.goo.gl/HsdVmDbgaQNgLmqD7';
             }else{
-                $eventTime    = 'October 8, 2021';
+                $eventTime    = 'October 15, 2021';
                 $location     = 'Golden Jewel Beach & Hotel, Alexandria';
                 $locationMap  = 'https://maps.app.goo.gl/e4YR31xWUCbhwneo7';
             }
