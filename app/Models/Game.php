@@ -26,4 +26,9 @@ class Game extends Model
 
     }
 
+    public function user(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Registration::class, 'user_code', 'user_code');
+    }
+
 }

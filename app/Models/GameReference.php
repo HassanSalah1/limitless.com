@@ -21,4 +21,8 @@ class GameReference extends Model
             ->get();
 
     }
+    public function games(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Game::class, 'code', 'code');
+    }
 }

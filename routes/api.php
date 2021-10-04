@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::post('game','Dashboard\GameController@store')->name('game.store');
+Route::get('game/{code}','Dashboard\GameController@getGame')->name('game.info');
+

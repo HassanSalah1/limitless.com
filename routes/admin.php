@@ -6,7 +6,7 @@ Auth::routes(['register' => false]);
 
 Route::group(['namespace'=>'Dashboard'],function () {
 
-    Route::group(['middleware' => ['auth']], function () {
+//    Route::group(['middleware' => ['auth']], function () {
 
         Route::get('home', 'HomeController@index')->name('dashboard.home');
 
@@ -23,6 +23,6 @@ Route::group(['namespace'=>'Dashboard'],function () {
         Route::get('games/index', 'GameController@index')->name('games.index');
         Route::get('surveys/index', 'SurveyController@index')->name('surveys.index');
 
-    });
+//    });
 
 });
