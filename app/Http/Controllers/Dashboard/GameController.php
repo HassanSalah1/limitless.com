@@ -72,6 +72,7 @@ class GameController extends Controller
             $mapGames = collect($game->games)->groupBy('user_code')->map(function ($map) {
                 return [
                     'name' => $map->first()->user->first()->full_name,
+                    'user_code' => $map->first()->user_code,
                     'score' => $map->sum('score')
                 ];
             });
