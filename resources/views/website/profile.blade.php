@@ -32,19 +32,19 @@
                     <div class="col-10">
                         <form>
                             <div class="row">
-                                <div class="col-lg-6 col-12">
+                                <div class="col-lg-6 col-12 mt-2">
                                     <label>Email</label>
                                     <div class="form-group">
                                         <input type="text" value="{{$registration->email}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div><!--col-lg-6-->
-                                <div class="col-lg-6 col-12">
+                                <div class="col-lg-6 col-12 mt-2">
                                     <label>Phone Number</label>
                                     <div class="form-group">
                                         <input type="text" value="{{$registration->phone}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div><!--col-lg-6-->
-                                <div class="col-lg-6 col-12">
+                                <div class="col-lg-6 col-12 mt-2">
                                     <label>The Venue</label>
                                     <div class="form-group">
                                         <input type="text" value="{{$registration->venue}}" disabled class="form-control">
@@ -57,10 +57,16 @@
 {{--                                    </div><!--form-group-->--}}
 {{--                                </div><!--col-lg-6-->--}}
 
-                                <div class="col-lg-6 col-12">
+                                <div class="col-lg-6 col-12 mt-2">
                                     <label>Register as</label>
                                     <div class="form-group">
                                         <input type="text" value="{{$registration->register_as}}" disabled class="form-control">
+                                    </div><!--form-group-->
+                                </div>
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <label>Join LPLP community</label>
+                                    <div class="form-group">
+                                        <input type="text" value="{{$registration->join_club}}" disabled class="form-control">
                                     </div><!--form-group-->
                                 </div>
                             </div><!--row-->

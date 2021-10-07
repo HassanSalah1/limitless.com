@@ -30,6 +30,7 @@
                     <th>Governorate</th>
                     <th>created_at</th>
                     <th>Register as</th>
+                    <th>Join LPLP</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -46,6 +47,7 @@
                     <td>{{$registration->governorate}}</td>
                     <td>{{$registration->created_at}}</td>
                     <td>{{$registration->register_as}}</td>
+                    <td>{{$registration->join_club}}</td>
                     <td>
                         <a class="deleteThisBtnFinle" data-id="{{ $registration->id }}" ><i class="fas fa-trash-alt"></i></a>
                     </td>
@@ -63,6 +65,7 @@
                     <th>Governorate</th>
                     <th>created_at</th>
                     <th>Register as</th>
+                    <th>Join LPLP</th>
                     <th>Actions</th>
                 </tr>
                 </tfoot>

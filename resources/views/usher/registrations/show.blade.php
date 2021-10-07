@@ -157,7 +157,7 @@
             @if ($registration->is_attend == 0)
                 <a href="#" class="mr-3 d-inline-block" onclick="$('form#data').submit();" >attend</a>
             @endif
-            <a class="mr-3" onclick="print_page()">Print</a>
+{{--            <a class="mr-3" onclick="print_page()">Print</a>--}}
             <a href="{{ route('usher.home') }}">Go Back</a>
         </div>
 
@@ -223,7 +223,11 @@
                                     <input type="text" class="form-control col-12" name="register_as"
                                         id="medical_representative" value="{{ $registration->register_as }}" disabled>
                                 </div>
-
+                                <div class="form-group col-12" style="float: left;">
+                                    <label for="medical_representative" class="col-12" style="padding: 0;">Join LPLP community</label>
+                                    <input type="text" class="form-control col-12" name="join_club"
+                                           id="medical_representative" value="{{ $registration->join_club }}" disabled>
+                                </div>
                             </div>
 
                              @if ($registration->is_attend == 0)

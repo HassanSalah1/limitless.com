@@ -24,11 +24,11 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto" id="ulnav">
                             <li class="nav-item active">
-                                <a class="nav-link" onclick="hideDiv()" href="<?php echo url('/').'/agenda/#agenda' ?>">Agenda <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" onclick="hideDiv()" href="<?php echo url('/').'/agenda/#agenda' ?>"> Join LPLP community  <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link "  onclick="hideDiv2()" href="<?php echo url('/').'/agenda/#speakers' ?>">Speakers & Chairmen</a>
-                            </li>
+{{--                            <li class="nav-item">--}}
+{{--                                <a class="nav-link "  onclick="hideDiv2()" href="<?php echo url('/').'/agenda/#speakers' ?>">Speakers & Chairmen</a>--}}
+{{--                            </li>--}}
                             <li class="nav-item">
                                 <a class="nav-link" onclick="hideDiv3()" href="<?php echo url('/').'/agenda/#games' ?>">Game Scores</a>
                             </li>

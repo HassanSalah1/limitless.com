@@ -61,13 +61,10 @@
                 </div><!--col-lg-6-->
                 <div class="col-lg-6">
                     <div class="main-div web-reserve">
-                       {{-- <div >
-                            <img class="img-cal" src="{{asset('images/cal.png')}}">
-                            <p> <span class="red-color">30<sup>th</sup>July</span ><span class="dates-span">5:30 pm to 10:00 p.m</span></p>
-                            <p class="block-span text-left"><b><span class="red-color dates-span2">2<sup>nd</sup> of September</span></b>
-                                <br><span >5:00 PM to 10:00 PM</span></p>
-                        </div> --}}
-                        <a href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
+
+                        <a href="#login" class="login-click" style="background-image: linear-gradient(to right, #983da7, #2c519d);">join LPLP community</a>
+
+                        <a href="#reserve" class="register-click">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
                     </div><!--main-div-->
                 </div><!--col-lg-6-->
 
@@ -85,7 +82,9 @@
 {{--                        <p class="block-span text-left"><b><span class="red-color dates-span2">2<sup>nd</sup> of September</span></b>--}}
 {{--                            <br><span >5:00 PM to 10:00 PM </span></p>--}}
 {{--                    </div>--}}
-                    <a  href="#reserve">Reserve Your Spot <span><img src="{{asset('images/arrow2.png')}}"></span></a>
+                    <a href="#login" class="login-click" style="background-image: linear-gradient(to right, #983da7, #2c519d);">join LPLP community</a>
+
+                    <a href="#reserve" class="register-click">Reserve Your Spot <span><img src="{{asset('images/arrow.png')}}"></span></a>
                 </div><!--main-div-->
             </div><!--col-lg-12-->
         </div>
@@ -124,7 +123,7 @@
 
 
     <div class="registration-div"  id="reserve" >
-        <img class="image-regist" src="{{asset('images/image-regist.png')}}">
+        <img class="image-regist" style="top: unset !important;" src="{{asset('images/image-regist.png')}}">
         <div class="container">
             <div class="row" style="justify-content: center;">
                 <div class="col-10">
@@ -298,6 +297,13 @@
 @endsection('content')
 @push('js')
     <script>
+        $('.login-click').on('click', function (e) {
+
+            $('.nav-tabs a[href="#login"]').tab('show')
+        })
+        $('.register-click').on('click', function (e) {
+            $('.nav-tabs a[href="#regitration"]').tab('show')
+        })
         $('#register_as').on('change', function() {
              if (this.value === 'other'){
                  $('#other').removeClass('d-none');
