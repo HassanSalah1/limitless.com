@@ -33,7 +33,7 @@
 
     <section class="content">
         <div class="div-video">
-            <img class="abs-image" src="{{ asset('images/img.png') }}">
+            <img class="abs-image" src="{{ asset('images/img1.png') }}">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
