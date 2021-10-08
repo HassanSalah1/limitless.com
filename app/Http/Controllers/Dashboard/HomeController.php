@@ -31,16 +31,31 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $registrations = Registration::count();
-        $games = Game::count();
-        $surveys = Survey::count();
-        $registrationsAttend = Registration::where('is_attend', 1)->count();
+        $registrations = Registration::get();
+        $registrationsAttend = $registrations->where('is_attend', 1);
+        $games = Game::get();
+        $surveys = Survey::get();
         if ($request->ajax()) {
+             if ($request->event){
+
+                 $event = $request->event;
+                 $eventRegistrations = $registrations->where('venue',$event);
+                 $usersCodes = $eventRegistrations->pluck('user_code');
+                 $usersIds = $eventRegistrations->pluck('id');
+                 $eventRegistrationsAttend = $eventRegistrations->where('is_attend', 1);
+                 $data = [
+                     'registrations' => $eventRegistrations->count(),
+                     'games' => $games->whereIn('user_code', $usersCodes)->count(),
+                     'surveys' => $surveys->whereIn('registration_id', $usersIds)->count(),
+                     'registrationsAttend' => $eventRegistrationsAttend->count()
+                 ];
+                 return response()->json($data);
+             }
             $data = [
-                'registrations' => $registrations,
-                'games' => $games,
-                'surveys' => $surveys,
-                'registrationsAttend' => $registrationsAttend
+                'registrations' => $registrations->count(),
+                'games' => $games->count(),
+                'surveys' => $surveys->count(),
+                'registrationsAttend' => $registrationsAttend->count()
             ];
             return response()->json($data);
         }
