@@ -205,7 +205,7 @@
                                         <select name="venue" id="venueSelect" required>
                                             {{--                                            <option value=""></option>--}}
 {{--                                            <option value="OBGYN Conference 16-17.9.2021" selected>OBGYN Conference 16-17.9.2021</option>--}}
-                                            <option value="LPLP (St.Regis Cairo) 8.10.2021">LPLP (St.Regis Cairo) 8.10.2021</option>
+{{--                                            <option value="LPLP (St.Regis Cairo) 8.10.2021">LPLP (St.Regis Cairo) 8.10.2021</option>--}}
                                             <option value="LPLP (Golden Jewel, Alex) 15.10.2021">LPLP (Golden Jewel, Alex) 15.10.2021</option>
                                         </select>
                                     </div><!--col-12-->
