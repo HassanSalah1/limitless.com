@@ -50,7 +50,7 @@ class GameController extends Controller
             return response()->json(['error' => 'data not save'], 409);
         }
 
-        return response()->json(['message','data saved.']);
+        return response()->json(['message' => 'data saved.', $request->all()]);
     }
 
     /**
