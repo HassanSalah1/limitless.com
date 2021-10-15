@@ -36,8 +36,12 @@ class GameController extends Controller
 
         try {
             DB::beginTransaction();
-
-            $this->game->where('user_code',$request->userCode,)->where('code',$request->gameCode)->update(['score'=>$request->gameScore]);
+            $user =  $this->game->where('user_code',$request->userCode,)->where('code',$request->gameCode)->first();
+            if (!$user){
+                $this->game->create(['user_code' => $request->userCode,'code' => $request->gameCode, 'score'=>$request->gameScore]);
+            }else{
+                $this->game->where('user_code',$request->userCode)->where('code',$request->gameCode)->update(['score'=>$request->gameScore]);
+            }
 
             DB::commit();
 
